@@ -27,7 +27,7 @@ const Edit = () => {
     const handleSubmit = async (e,id) => {
         e.preventDefault()
         console.log(todo);
-
+        
         await axios.put(`https://bootcamp.todo.arhamsoft.org/client/todo/edit/${todo._id}`,
         {userId:todo.userId, title: todo.title, desc : todo.desc})
 
