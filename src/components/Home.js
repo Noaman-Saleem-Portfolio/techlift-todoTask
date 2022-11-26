@@ -25,6 +25,7 @@ const Home = () => {
     
 
     const navigate = useNavigate()
+    const navigateToPaginatedTodos = (route) => navigate(route)
     const navigateToCreateRoute = (route) => navigate(route)
     const navigateToEditRoute = (route) => navigate(route)
     // const navigateToHomeRoute = (route) => navigate(route)
@@ -68,7 +69,10 @@ const Home = () => {
 
   return (
     <div>
+        <button onClick={() => navigateToPaginatedTodos('/paginated-todos')}>Paginated Todo List View</button>
         <button onClick={()=>navigateToCreateRoute('/create')}>Create a Todo</button>
+
+
         <h1>Table of Todos</h1>
 
         
